@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.timeline_area {
+    position: relative;
+    z-index: 1;
+}
+
+.single-timeline-area {
+    position: relative;
+    z-index: 1;
+    padding-left: 180px;
+}
+
+@media only screen and (max-width: 575px) {
+    .single-timeline-area {
+        padding-left: 100px;
+    }
+}
+
+.single-timeline-area .timeline-date {
+    position: absolute;
+    width: 180px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    padding-right: 60px;
+}
+
+@media only screen and (max-width: 575px) {
+    .single-timeline-area .timeline-date {
+        width: 100px;
+    }
+}
+
+.single-timeline-area .timeline-date::after {
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    content: "";
+    background-color: #ebebeb;
+    top: 0;
+    right: 30px;
+    z-index: 1;
+}
+
+.single-timeline-area .timeline-date::before {
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #f1c40f;
+    content: "";
+    top: 50%;
+    right: 26px;
+    z-index: 5;
+    margin-top: -5.5px;
+}
+
+.single-timeline-area .timeline-date p {
+    margin-bottom: 0;
+    color: #020710;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.single-timeline-area .single-timeline-content {
+    position: relative;
+    z-index: 1;
+    padding: 30px 30px 25px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    -webkit-box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+    box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+    border: 1px solid #ebebeb;
+}
+
+@media only screen and (max-width: 575px) {
+    .single-timeline-area .single-timeline-content {
+        padding: 20px;
+    }
+}
+
+.single-timeline-area .single-timeline-content .timeline-icon {
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    width: 30px;
+    height: 30px;
+    background-color: #f1c40f;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 30px;
+    flex: 0 0 30px;
+    text-align: center;
+    max-width: 30px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.single-timeline-area .single-timeline-content .timeline-icon i {
+    color: #ffffff;
+    line-height: 30px;
+}
+
+.single-timeline-area .single-timeline-content .timeline-text h6 {
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+}
+
+.single-timeline-area .single-timeline-content .timeline-text p {
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+.single-timeline-area .single-timeline-content:hover .timeline-icon,
+.single-timeline-area .single-timeline-content:focus .timeline-icon {
+    background-color: #020710;
+}
+
+.single-timeline-area .single-timeline-content:hover .timeline-text h6,
+.single-timeline-area .single-timeline-content:focus .timeline-text h6 {
+    color: #3f43fd;
+}
+
+.cont-card {
+    background: url(../img/cPF2nlWcMY4-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.cont-title {
+    background: url(../img/pngtree-abstract-night-sky-with-glowing-stars-image_400316.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    height: auto;
+    padding: 50px auto;
+}
+
+.cont-title,
+.text-lower {
+    font-family: 'Roboto', 'Oxigen', sans-serif;
+}
+
+.main {
+    margin: 80px auto;
+}
+
+/*anmacion imagen titulo*/
+.main img {
+    width: 50%;
+    animation: palpitar 10s linear alternate infinite;
+}
+
+@keyframes palpitar {
+    0% {
+        transform: scale(1.0);
+    }
+    50% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+/*animacion texto tipo star wars*/
+.text-starWars {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 30px;
+    letter-spacing: 1.5px;
+    max-width: 1080px;
+    height: 250px;
+    padding-top: 50px;
+    padding-bottom: 150px;
+    transform: perspective(170px) rotateX(15deg);
+    animation: intro 20s linear infinite;
+}
+
+@keyframes intro {
+    0% {
+        transform: perspective(170px) rotateX(15deg) translateY(10px);
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: perspective(170px) rotateX(20deg) translateY(-700px);
+        opacity: 0;
+    }
+}
+
+/*robot + texto*/
+.cont-lower {
+    height: auto;
+}
+
+/*animacion girar robot*/
+.bb-8 img {
+    width: 85px;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0px 7px 21px orange);
+    animation: girar 2s linear infinite;
+}
+
+@keyframes girar {
+    from {
+        transform: rotateY(180deg);
+    }
+    to {
+        transform: rotateY(-180deg);
+    }
+}
+
+
+/*MEDIA QUUERYS*/
+@media (max-width: 576px) {
+    .main {
+        margin: 50px auto;
+    }
+    .text-starWars {
+        animation: none;
+        text-align: center;
+        letter-spacing: 0;
+        padding: 30px auto;
+        font-size: 15px;
+        transform: perspective(0) rotateX(0);
+    }
+    .cont-lower {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        margin: 0 auto;
+        padding: 20px auto;
+    }
+    .cont-lower img {
+        text-align: center;
+        margin: 0 auto;
+        padding-bottom: 15px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .main {
+        padding: 40px auto;
+        margin-bottom: 10px;
+    }
+    .main img {
+        padding-bottom: 30px;
+    }
+    .text-starWars {
+        animation: none;
+        text-align: center;
+        font-size: 17px;
+        letter-spacing: 0;
+        padding: 10px;
+        transform: perspective(0) rotateX(0);
+    }
+}
+
