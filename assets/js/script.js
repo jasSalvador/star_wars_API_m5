@@ -6,7 +6,7 @@ async function mostrarPersonaje(i, id, contenedorCards, color) {
 
             constructora(data, id, contenedorCards, color);
     }
-    catch {
+    catch (error) {
         console.log("error", error);
     }
 }
